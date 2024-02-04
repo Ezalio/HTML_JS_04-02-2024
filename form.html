@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="form-page">
+
+
+    <main>
+
+        <div class="title">
+            <h1>Formulaire d'inscription</h1>
+        </div>
+        <br>
+        <form id="myform">
+        
+            
+            <div class="display-grid">
+                <div class="element">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required minlength="2" />
+                </div>
+                
+                <div class="element">
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required minlength="2" />
+                </div>
+                
+                <div class="element">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                
+                <div class="element">
+                    <label for="adresse">Adresse :</label>
+                    <input type="text" id="adresse" name="adresse" required minlength="2" />
+                </div>
+                
+                <div class="element">
+                    <label for="ville">Ville :</label>
+                    <input type="text" id="ville" name="ville" required minlength="2" />
+                </div>
+                
+                <div class="element">
+                    <label for="code-postal">Code Postal :</label>
+                    <input type="text" id="code-postal" name="code-postal" required minlength="5" maxlength="5"/>
+                </div>
+                
+                <div class="element">
+                    <label for="pays">Pays :</label>
+                    <input type="text" id="pays" name="pays" required minlength="2">
+                </div>
+          
+                <div class="element">
+                    <label for="birthday">Date de naissance:</label>
+                    <input type="date" id="birthday" name="birthday" required min="1900-01-01" max="2020-01-01">
+                </div>
+                
+            </div>
+            
+            <div class="block">
+                <div class="element">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" required minlength="6"/>
+                </div>
+
+                <div class="element">
+                    <label for="password-confirm">Confirmation du mot de passe :</label>
+                    <input type="password" id="password-confirm" name="password-confirm" required/>
+                </div>
+                
+                <div class="element">
+                    <label for="conditions">
+                    <input type="checkbox" id="conditions" name="conditions" required /> J'accepte les conditions d'utilisations </label>
+                </div>
+    
+                <div class="error" id="error"></div>
+
+                <div class="element">
+                    <button type="submit" value="inscription"> S'inscrire </button>
+                </div>
+            </div>
+
+          </form>
+          <div id="confirmation-message">
+            <p>Inscription réussie!</p>
+            <button onclick="window.location.href='index.html';">Retourner sur la page d'accueil</button>
+          </div>
+    </main>
+
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>

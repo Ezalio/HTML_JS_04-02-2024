@@ -1,0 +1,389 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Arial";
+}
+
+/*STYLE FORMULAIRE*/
+.form-page {
+    background-image: url(Images/form-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 200px;
+    padding: 30px;
+    background-color: whitesmoke;
+    border: solid 2px black;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 lightgray;
+}
+
+form {
+    width: 50%;
+}
+
+.title {
+    width: 100%;
+    text-align: center
+}
+
+.element {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    padding: 5px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: white;
+    border: 3px solid #ccc;
+    font-size: 100%;
+}
+
+
+form input:focus {
+    border: 3px solid blue;
+}  
+
+form input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+.block .element {
+    width: 100%;
+}
+
+
+.display-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.error {
+    color: crimson;
+}
+
+form button {
+    padding: 15px 60px ;
+    font-size: medium;
+    background-color: lightblue;
+    border: none;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin: auto;
+}
+
+form button:hover {
+    background-color: lightskyblue;
+    cursor: pointer;
+}
+
+
+#confirmation-message {
+    display: none;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+}
+
+#confirmation-message button {
+    padding: 5px 15px ;
+    background-color: lightblue;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+#confirmation-message button:hover {
+    background-color: lightskyblue;
+    cursor: pointer;
+}
+
+
+@media screen  and (max-width: 1000px) {
+
+    form {
+        width: 100%;
+        margin: 20px;
+    }
+
+    main {
+        margin: 5px 0px;
+        padding: 5px;
+    }
+
+    form .block .element {
+        margin: 8px 5px;
+    }
+}
+
+
+
+/*STYLE PAGE PRINCIPALE*/
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: lightgray;
+}
+
+/* MENU BURGER */
+header {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+  
+.nav-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease; /*transition*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-image: linear-gradient(black, navy);
+    border-bottom: 4px solid black;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+}
+  
+.nav-menu.show {
+    max-height: 500px;
+}
+  
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+  
+.nav-menu li {
+    margin-bottom: 15px;
+}
+
+.nav-menu a:hover {
+    color: fuchsia;
+}
+  
+#link-form {
+    background-color: darkcyan;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 15px;
+    transition: color 0.3s ease-in-out;
+}
+  
+.burger-menu {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+  
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.barre1, .barre2, .barre3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+/*croix*/
+.burger-menu.open .barre1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+  
+.burger-menu.open .barre2 {
+    opacity: 0;
+}
+  
+.burger-menu.open .barre3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+  
+
+
+#rocket-icon img {
+    height: 50px;
+    margin-right: 15px;
+    transform: scaleX(-1);
+    transition: ease-in-out 1s;
+}
+
+#rocket-icon img:hover {
+    content: url(Images/rocket-bold.png);
+}
+
+.Home .title h1 {
+    margin: 20px;
+    font-size: 70px;
+}
+
+
+
+
+
+
+/*SLIDER*/
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+}
+
+.slideshow img {
+    height: 500px;
+}
+
+.slideshow {
+    position: relative;
+    margin: auto;
+    max-width: 800px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+}
+
+
+/*Boutons Slider*/
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/*METEORITES*/
+.text {
+    height: 300px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 150px;
+    text-align: justify;
+    gap: 150px;
+}
+
+.text img {
+    height: 300px;
+}
+
+.meteor-block {
+    background-image: url(Images/night-sky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    margin-bottom: 50px;
+}
+
+.meteor-shower-button {
+    background-color: purple;
+    border-radius: 15px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.meteor-shower-button:hover {
+    background-color: darkmagenta;
+}
+
+.meteor-container {
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.meteor {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: #fff;
+    opacity: 0.8;
+    animation: meteorFall 2s linear infinite;
+}
+
+@keyframes meteorFall {
+    from {
+      transform: translateY(-10vh);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(110vh);
+      opacity: 0;
+    }
+}
+
+.text a {
+    color: navy;
+    transition: ease-in-out 0.3s;
+}
+
+.text a:hover {
+    color: fuchsia;
+}

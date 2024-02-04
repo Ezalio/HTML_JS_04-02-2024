@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Page principale</title>
+  </head>
+  <body class="Home">
+    <header>
+      <div class="burger-menu" onclick="toggleMenu()">
+        <div class="container">
+          <div class="barre1"></div>
+          <div class="barre2"></div>
+          <div class="barre3"></div>
+        </div>
+      </div>
+      <div id="rocket-icon">
+        <img src="Images/rocket-line.png" alt="icone fusée" />
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li>
+            <a href="https://spacenews.com/" target="_blank">Space News</a>
+          </li>
+          <li><a href="https://www.nasa.gov/" target="_blank">Nasa</a></li>
+          <li>
+            <a
+              href="https://www.sciencesetavenir.fr/galeries-photos/espace/"
+              target="_blank"
+              >Galerie</a
+            >
+          </li>
+          <li><a href="form.html" id="link-form">Inscription</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="title">
+      <!--Titre-->
+      <h1>Nébuleuses et Galaxies</h1>
+    </div>
+
+    <div class="slideshow">
+      <!--SLider-->
+      <div class="slide">
+        <img src="Images/Crab_Nebula.jpg" />
+        <div class="caption">Nébuleuse du Crabe</div>
+      </div>
+      <div class="slide">
+        <img src="Images/eagle-nebula.jpg" />
+        <div class="caption">Nébuleuse de l'Aigle</div>
+      </div>
+      <div class="slide">
+        <img src="Images/piliers-de-la-creation.png" />
+        <div class="caption">Piliers de la Création</div>
+      </div>
+      <div class="slide">
+        <img src="Images/nebuleuse-rosette.jpg" />
+        <div class="caption">Nébuleuse de la Rosette</div>
+      </div>
+      <div class="slide">
+        <img src="Images/nebuleuse-lyre.JPG" />
+        <div class="caption">Nébuleuse de la Lyre</div>
+      </div>
+      <div class="slide">
+        <img src="Images/nebuleuse-cheval.jpg" />
+        <div class="caption">Nébuleuse de la Tête de Cheval</div>
+      </div>
+      <!--Boutons contrôles slider-->
+      <button class="prev" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="next" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <div class="text">
+      <p>
+        Les pluies de météores ou pluies d'étoiles filantes ont lieu lorsque la
+        Terre traverse un essaim de poussières souvent laissé par des comètes.
+        Attirées par la gravité terrestre, elles entrent dans l'atmosphère et
+        cela provoque de nombreuses météorites ou météores (appelés aussi
+        bolides). Cette traînée lumineuse est causée par la vaporisation du
+        corps et l'ionisation de l'air sur sa trajectoire, phénomènes dus
+        principalement à la compression de l'atmosphère en avant du corps
+        supersonique (et non à la friction). Cette incandescence se produit
+        entre 120 et 60 km d'altitude (avec une vitesse entre 40 000 et 290 000
+        km/h) : les étoiles filantes. Quelques grammes suffisent à avoir des
+        éclat égaux à ceux des étoiles. Elles semblent toutes provenir d'un seul
+        point appelé radiant. Les pluies de météores ont le nom de la
+        constellation contenant leur radiant. On peut observer à l'œil nu plus
+        de 9 milliards de météores par an. Ce qui est peu en comparaison de ce
+        qui frappait la Terre au moment de la naissance du système solaire.
+        <a
+          href="https://www.techno-science.net/glossaire-definition/Pluie-de-meteores.html"
+          target="_blank"
+          >► En savoir plus</a
+        >
+      </p>
+
+      <img src="Images/meteor-shower.jpg" alt="Pluie de météorites" />
+    </div>
+
+    <div class="meteor-block">
+      <button class="meteor-shower-button" onclick="toggleMeteorShower()">
+        Pluie de météorites : ACTIVER
+      </button>
+
+      <div class="meteor-container" id="meteorContainer"></div>
+    </div>
+
+    <div class="text">
+      <p>
+        En astronautique, une fusée est un véhicule mû par un moteur-fusée de
+        grande puissance qui lui permet de se déplacer dans l'espace proche, et
+        notamment de placer en orbite une charge utile (satellite artificiel),
+        voire d'échapper à l'attraction terrestre pour visiter différents corps
+        célestes. Les fusées de l'astronautique sont généralement dotées de
+        plusieurs étages mis à feu successivement. Les plus grosses fusées
+        construites, comme Saturn V, permettent de placer jusqu'à 150 tonnes en
+        orbite basse. <a href="https://fr.wikipedia.org/wiki/Fus%C3%A9e_(astronautique)" target="_blank">► En savoir plus</a>
+      </p>
+
+      <img src="Images/rocket-moving.gif" alt="Fusée">
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
